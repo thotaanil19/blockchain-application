@@ -1,0 +1,94 @@
+<app-dashboard></app-dashboard>
+
+
+
+<div class="container marginTop20">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12 columns customer-profile-text">
+            <div class="customer-details">
+                User Profile
+            </div>
+            <div class="customer-user-details" id="customerProfile">
+                <!-- Here Customer Profile will render from template -->
+                <div class="padding10"><img src="/assets/images/user-icon.png">
+                    <div class="greyColor adminId width160" data_id="50">Login ID</div>
+                    <span class="greyColor">:</span><span class="blueColor">{{loginId}}</span>
+                </div>
+                <div class="padding10"><img src="/assets/images/user-icon.png">
+                    <div class="greyColor adminId width160" data_id="50">Name</div>
+                    <span class="greyColor">:</span><span class="blueColor">{{name}}</span>
+                </div>
+                <div class="padding10">
+                    <img src="/assets/images/Phone-icon.png">
+                    <div class="greyColor width153">Phone</div>
+                    <span class="greyColor">:</span>
+                    <span class="blueColor">{{phone}}</span>
+                </div>
+                <div class="padding10">
+                    <img src="/assets/images/Email-icon.png">
+                    <div class="greyColor width153">Email</div>
+                    <span class="greyColor">:</span>
+                    <span class="blueColor">{{email}}</span>
+
+                </div>
+                <div class="padding10"><img src="/assets/images/is-active-icon.png">
+                    <div class="greyColor width160">Is Active</div>
+                    <span class="greyColor">:</span><span class="blueColor">{{isActive}}</span>
+
+                </div>
+                <div class="padding10"><img src="/assets/images/is-active-icon.png">
+                    <div class="greyColor width160">Role</div>
+                    <span class="greyColor">:</span><span class="blueColor">{{role}}</span>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-lg-1 col-md-1 col-sm-12"></div>
+
+        <div class="col-lg-5 col-md-5 col-sm-12 columns change-pwd-text marginLeft100" id="change-pwd-div">
+            <div class="customer-details">
+                Change Password
+            </div>
+
+            <div class="change-pwd-details">
+                <form [formGroup]="changePasswordForm">
+                    <div class="password-div form-group">
+                        <input [(ngModel)]="password" type="password" placeholder="Password" name="password"
+                            id="password" class="text-field" maxlength="60" style="border-color: rgb(67, 122, 186);"
+                            formControlName="password" class="form-control"
+                            [ngClass]="{ 'is-invalid': changePasswordSubmitted && f.password.errors }">
+                        <img src="/assets/images/password-icon.png">
+                    </div>
+                    <div class="password-div form-group">
+                        <input type="password" placeholder="New Password" [(ngModel)]="newPassword" name="newPassword"
+                            id="newPassword" class="text-field" maxlength="60" style="border-color: rgb(67, 122, 186);"
+                            formControlName="newPassword" class="form-control"
+                            [ngClass]="{ 'is-invalid': changePasswordSubmitted && f.newPassword.errors }">
+                        <img src="/assets/images/password-icon.png">
+                    </div>
+                    <div class="password-div form-group">
+                        <input type="password" placeholder="Confirm Password" [(ngModel)]="confirmPassword"
+                            name="confirmPassword" id="cnfrm-password" class="text-field" maxlength="60"
+                            style="border-color: rgb(67, 122, 186);" formControlName="confirmPassword"
+                            class="form-control"
+                            [ngClass]="{ 'is-invalid': changePasswordSubmitted && f.confirmPassword.errors }">
+                        <img src="/assets/images/password-icon.png">
+                    </div>
+                    <div class="pwd-change-status">
+                        <span class='pwd-change-success'
+                            *ngIf='changePasswordSubmitted && changePasswordStatus'>Password updated...</span>
+                        <span class='pwd-change-failure'
+                            *ngIf='changePasswordSubmitted && changePasswordStatus == false'>Password not updated...</span>
+                    </div>
+
+                    <div class="buttons-div paddingTop251 paddingBottom10">
+                        <input (click)="updatePassword()" type="button" value="Save" class="update-button"
+                            id="pwd-update-button">
+                        <input (click)="cancelUpdatePassword()" type="button" value="Cancel" class="cancel-button"
+                            id="pwd-cancel-button">
+                    </div>
+                </form>
+            </div>
+        </div>

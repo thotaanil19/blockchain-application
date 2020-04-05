@@ -1,0 +1,67 @@
+
+#add-advertisement-main-div
+{
+    margin: 0 auto;
+    max-width: 62.5rem;
+    width: 100%;
+    margin-top: 15px;
+}
+#add-advertisement{
+    width: 57%;
+    background-color: #e9ecef;
+}
+
+#add-advertisement .add-advertisement-form {
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.paddingBottom20 {
+    padding-bottom: 20px;
+}
+.marginLeft10 {
+    margin-left: 10px;
+}
+.marginRight10 {
+    margin-right: 10px;
+}
+
+.marginTop30 {
+    margin-top: 30px;
+}
+.textAlignCenter {
+    text-align: center;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #427ABA;
+    border-color: #427ABA;
+}
+.greyColor {
+    color: #7F7F7F;
+}
+
+.width160 {
+    width: 160px;
+    display: inline-block;
+    padding-left: 14px;
+}
+.add-advertisement-form input, .add-advertisement-form select{
+    width: 300px;
+}
+
+.form-control {
+    display: inline-block;
+}
+
+.successMessageDiv{
+    text-align: center;
+    color: green;
+}
+
+.failureMessageDiv{
+    text-align: center;
+    color: red;
+}
+

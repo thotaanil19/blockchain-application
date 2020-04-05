@@ -1,0 +1,7 @@
+# App Manifest
+applications:
+- name: blockchain-ui
+  buildpacks: 
+   - https://github.com/cloudfoundry/staticfile-buildpack
+  path: ./dist/blockchain-ui
+  command: "$HOME/boot.sh"

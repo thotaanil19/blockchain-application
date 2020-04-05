@@ -1,0 +1,148 @@
+.container {
+    min-height: 300px;
+}
+
+.marginTop20 {
+    margin-top: 20px;
+}
+.pwd-change-status {
+    height: 30px;
+}
+.pwd-change-success {
+    color:green;
+    margin-left: 20px;
+}
+.pwd-change-failure {
+    color:red;
+    margin-left: 20px;
+}
+ 
+.row {
+    margin: 0 auto;
+    max-width: 62.5rem;
+    width: 100%;
+}
+
+.padding10 {
+    padding: 10px 10px 6px;
+}
+
+.customer-profile-text, .change-pwd-text {
+    padding: 0;
+}
+
+#customerProfile {
+    background-color: #e9ecef;
+}
+
+.width160 {
+    width: 160px;
+    display: inline-block;
+    padding-left: 14px;
+}
+
+.greyColor {
+    color: #7F7F7F;
+}
+
+.customer-user-details span {
+    font-size: 18px;
+}
+.blueColor {
+    color: #427ABA;
+    padding-left: 5px;
+}
+
+.width153 {
+    width: 153px;
+    display: inline-block;
+    padding-left: 14px;
+}
+
+.paddingLeft8 {
+    padding-left: 8px;
+}
+
+
+
+.customer-profile-text, .change-pwd-text{
+	padding: 0;
+}
+.padding10{
+	padding: 10px 10px 6px;
+}
+.change-pwd-details{
+	/* margin-top: 20px; */
+	background-color: #e9ecef;
+	padding: 0;
+	width: 400px;
+	min-height: 170px;
+	
+}
+
+.paddingTop25 {
+    padding-top: 25px;
+}
+
+.marginLeft20{
+    margin-left: 20px;
+}
+input[type="password"]{
+	border: none;
+	border-bottom: 1px solid #437ABA;
+	box-shadow: none;
+	background-color: #e9ecef;
+}	
+.change-pwd-details img{
+	height: 22px;
+	 
+	top: -45px;
+	color: #FBFBFB;
+}
+.password-div{
+	padding-top: 10px;
+	margin-left: 20px;
+	margin-right: 5px;
+}
+.buttons-div{
+    text-align: center;
+ }
+
+.buttons-div input[type="button"]{
+	height: 30px;
+	line-height: 30px;
+    width: 100px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.buttons-div .update-button{
+	color: #FFF;
+	background-color: #427ABA;
+}
+
+.buttons-div .cancel-button{
+	background-color: #D4D4D4;
+}
+.customer-password-text{
+	font-size: 18px;
+    color: #427ABA;
+    cursor: pointer;
+    text-align: end;
+}
+
+
+.form-control {
+    display: inline-block;
+ 
+    width: 70%;
+}
+
+.form-group{
+    margin-bottom: 0px;
+}
+
+.paddingBottom10 {
+    padding-bottom: 10px;
+}

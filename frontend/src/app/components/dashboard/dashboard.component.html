@@ -1,0 +1,31 @@
+<div class="body">
+		<div class="row col-lg-12 col-md-12 col-sm-12 marginTop20">
+			<div class="col-lg-6 col-md-6 col-sm-6 columns admin-dashboard">
+				Dashboard
+			</div>
+			<!--<div class="col-lg-6 col-md-6 col-sm-6 customer-password-text" id="change-pwd">
+				Change Password
+			</div>-->
+        </div>
+        
+        <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <section class="top-bar-section marginTop20">
+                        <ul class="height40 list-group list-group-horizontal-sm list-group-horizontal-md list-group-horizontal-lg">
+                                <li class="list-group-item" [routerLink]="'/profile'">My Profile</li>
+                                <li *ngIf = "role == 'ADMIN'" class="list-group-item" [routerLink]="'/addUser'">Add User</li>
+                                <li *ngIf = "role == 'REGISTRATION_OFFICER'" class="list-group-item" [routerLink]="'/registration'">Registeration</li>
+                                <li class="list-group-item" [routerLink]="'/blockchain'">Registeration History</li>
+                                <li class="list-group-item" [routerLink]="'/advertisements'">Advertisements</li>
+                                <li *ngIf = "role == 'PUBLIC_USER'" class="list-group-item" [routerLink]="'/addadvertisement'">Add Advertisement</li>
+                        </ul>
+
+                    </section>
+                </div>
+            </div>
+
+    </div>
+
+
+    
+    

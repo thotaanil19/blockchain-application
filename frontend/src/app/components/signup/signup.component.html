@@ -1,0 +1,52 @@
+<div id="signup-main-div">
+    Public User Sign Up
+    <div id="signup">
+        <div class="signup-form">
+           
+            <div *ngIf="saveStatus" class="successMessageDiv">Saved successfully!!!</div>
+            <div *ngIf="!saveStatus && submitted" class="failureMessageDiv">{{errorMessage}}</div>
+
+            <form [formGroup]="signupForm">
+
+                <div class="form-group">
+                    <span class="greyColor width160">Name</span>: <input [(ngModel)]="name" type="text"
+                        placeholder="Name" formControlName="name" class="form-control marginLeft10"
+                        [ngClass]="{ 'is-invalid': submitted && f.name.errors }">
+                        <br>
+                </div>
+                <div class="form-group">
+                    <span class="greyColor width160">Aadhar Id</span>: <input [(ngModel)]="socialInsuranceNumber" type="text"
+                        placeholder="Aadhar Id" formControlName="socialInsuranceNumber" class="form-control marginLeft10"
+                        [ngClass]="{ 'is-invalid': submitted && f.socialInsuranceNumber.errors }">
+                    <br>
+                </div>
+                <div class="form-group">
+                    <span class="greyColor width160">Email</span>: <input [(ngModel)]="email" type="text"
+                        placeholder="Email" formControlName="email" class="form-control marginLeft10"
+                        [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+                    <br>
+                </div>
+               <!-- <div class="form-group">
+                    <span class="greyColor width160">Password</span>: <input [(ngModel)]="password" type="text"
+                        placeholder="Password" formControlName="password" class="form-control marginLeft10"
+                        [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+                    <br>
+                </div>  -->
+                <div class="form-group">
+                    <span class="greyColor width160">Phone</span>: <input [(ngModel)]="phone" type="text"
+                        placeholder="Phone" formControlName="phone" class="form-control marginLeft10"
+                        [ngClass]="{ 'is-invalid': submitted && f.phone.errors }">
+                    <br>
+                </div>
+                
+               
+                <div class="marginTop30 textAlignCenter paddingBottom20">
+                    <button (click)="signup()" class="btn btn-primary marginRight10 col-sm-3">Sign Up</button>
+                    <button (click)="cancel()" class="btn btn-primary marginLeft10 col-sm-3">Cancel</button>
+                </div>
+            </form>
+
+
+        </div>
+    </div>
+</div>

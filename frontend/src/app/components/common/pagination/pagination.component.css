@@ -1,0 +1,14 @@
+.previous-btn {
+    width: 90px;
+    margin-right: 10px;
+    background-color: #427ABA;
+    border-color: #427ABA;
+}
+
+.next-btn {
+    width: 90px;
+    margin-left: 10px;
+    background-color: #427ABA;
+    border-color: #427ABA;
+}
+

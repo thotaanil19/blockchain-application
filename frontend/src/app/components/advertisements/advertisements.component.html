@@ -1,0 +1,52 @@
+<app-dashboard></app-dashboard>
+
+<div id="advertisements">
+
+  <div class="row">
+    <div class="form-group col-md-3">
+      <input type="text" placeholder="Filter the results" 
+      class="form-control form-control-underlined" [(ngModel)]="searchText">
+    </div>
+    <div class="form-group col-md-3">
+      <button type="submit" class="btn btn-primary search-btn" (click) = "filterTheResults()">
+        <span class="fa fa-search"></span> Search</button>
+    </div>
+  </div>
+
+  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Seller Name</th>
+        <th scope="col">Seller Phone No.</th>
+        <th scope="col">Price</th>
+        <th scope="col">Property Survey Number</th>
+        <th scope="col">Property Address</th>
+        <th scope="col">Property Type</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor='let advertisement of pagedItems;'>
+        <td>{{advertisement.sellerName}}</td>
+        <td>{{advertisement.sellerPhone}}</td>
+        <td>{{advertisement.price}}</td>
+        <td>{{advertisement.surveyNumber}}</td>
+        <td>{{advertisement.propertyAddressCity + ", " + advertisement.propertyAddressState}}</td>
+        <td>{{advertisement.propertyType}}</td>
+         <td>
+           <span *ngIf="socialInsuranceNumber == advertisement.sellerSocialInsuranceNumber" 
+           (click)="deleteAdvertisement(advertisement)">
+           <img class = "trash-icon" src="/assets/images/trash-icon.png"/>
+          </span>
+        </td>
+      </tr>
+    </tbody>
+    
+  </table>
+  
+  <app-pagination [data] = "filteredResults"  (changePage)="onChangePage($event)"></app-pagination>
+
+
+</div>

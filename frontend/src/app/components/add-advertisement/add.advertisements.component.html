@@ -1,0 +1,106 @@
+<app-dashboard></app-dashboard>
+
+<div id="add-advertisement-main-div">
+    <div id="add-advertisement">
+
+        <div class="add-advertisement-form">
+
+            <div *ngIf="saveStatus" class="successMessageDiv">Saved successfully!!!</div>
+            <div *ngIf="!saveStatus && submitted" class="failureMessageDiv">It seems this property is not yours.
+                If this property belongs to you, please contact nearest Registration Office. </div>
+
+            <form [formGroup]="addAdvertisementForm">
+
+                <div class="form-group">
+                    <span class="greyColor width160">Seller</span>: <input [(ngModel)]="sellerName" type="text"
+                        placeholder="Seller" formControlName="sellerName" class="form-control marginLeft10"
+                        [ngClass]="{ 'is-invalid': submitted && f.sellerName.errors }">
+                    <br>
+                </div>
+
+                <div class="form-group">
+                    <span class="greyColor width160">Seller Aadhar Id</span>: <input
+                        [(ngModel)]="sellerSocialInsuranceNumber" type="text" placeholder="Seller Aadhar Id"
+                        formControlName="sellerSocialInsuranceNumber" class="form-control marginLeft10"
+                        [ngClass]="{ 'is-invalid': submitted && f.sellerSocialInsuranceNumber.errors }">
+                    <br>
+                </div>
+
+                <div class="form-group">
+                    <span class="greyColor width160">Seller Phone</span>: <input [(ngModel)]="sellerPhone" type="text"
+                        placeholder="Seller Phone" formControlName="sellerPhone" class="form-control marginLeft10"
+                        [ngClass]="{ 'is-invalid': submitted && f.sellerPhone.errors }">
+                    <br>
+                </div>
+
+                <div class="form-group">
+                    <span class="greyColor width160">Price</span>: <input [(ngModel)]="price" type="text"
+                        placeholder="Price" formControlName="price" class="form-control marginLeft10"
+                        [ngClass]="{ 'is-invalid': submitted && f.price.errors }">
+                    <br>
+                </div>
+
+                <div class="form-group">
+                    <span class="greyColor width160">Survey Number</span>: <input [(ngModel)]="surveyNumber" type="text"
+                        placeholder="Survey Number" formControlName="surveyNumber" class="form-control marginLeft10"
+                        [ngClass]="{ 'is-invalid': submitted && f.surveyNumber.errors }">
+                    <br>
+                </div>
+
+
+               
+
+
+                <div class="form-group">
+                    <span class="greyColor width160">Property State</span>:
+                    <select [(ngModel)]="propertyAddressState" type="text" placeholder="Property Province"
+                        formControlName="propertyAddressState" class="form-control marginLeft10"
+                        [ngClass]="{ 'is-invalid': submitted && f.propertyAddressState.errors }">
+
+                        <option [ngValue]="null">State</option>
+                        <option *ngFor="let state of india_states" value={{state.name}}>
+                            {{state.name}}
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+                    <span class="greyColor width160">Property City</span>:
+                    <select [(ngModel)]="propertyAddressCity" type="text" placeholder="Property City"
+                        formControlName="propertyAddressCity" class="form-control marginLeft10"
+                        [ngClass]="{ 'is-invalid': submitted && f.propertyAddressCity.errors }">
+                        <option [ngValue]="null">City</option>
+                        <option *ngFor="let city of populteDistricts()" value={{city}}>
+                            {{city}}
+                        </option>
+                    </select>
+                    <br>
+                </div>
+
+                <div class="form-group">
+                    <span class="greyColor width160">Property Type</span>:
+                    <select [(ngModel)]="propertyType" type="text" placeholder="Property Type"
+                        formControlName="propertyType" class="form-control marginLeft10"
+                        [ngClass]="{ 'is-invalid': submitted && f.propertyType.errors }">
+                        <option [ngValue]="null">Property Type</option>
+                        <option value="Agriculturial Land">Agriculturial Land</option>
+                        <option value="Apartment">Apartment</option>
+                        <option value="Flat">Flat</option>
+                        <option value="Individual House">Individual House</option>
+                        <option value="Plot">Plot</option>
+                    </select>
+                    <br>
+                </div>
+
+                <div class="marginTop30 textAlignCenter paddingBottom20">
+                    <button (click)="save()" class="btn btn-primary marginRight10 col-sm-3">Save</button>
+                    <button (click)="cancel()" class="btn btn-primary marginLeft10 col-sm-3">Cancel</button>
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,21 @@
+
+#header-section  a {
+    color: white
+}
+
+#header-section {
+    margin:auto;
+    width: 80%;
+    border-radius: 5px;
+
+    height: 40px;
+    background-color: #427ABA;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.height40 {
+    height: 40px;
+}
+
+ 

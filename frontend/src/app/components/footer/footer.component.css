@@ -1,0 +1,38 @@
+.footer {
+    color: #7F7F7F;
+    font-size: 14px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    background-color: #E5E5E5;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 5px;
+    margin:auto;
+    width: 70%;
+}
+
+.left-div span a {
+    margin-left: 20px;
+    color: #7F7F7F;
+    font-size: 14px;
+}
+
+.footer-text span {
+    color: #7F7F7F;
+    font-size: 14px;
+}
+
+.marginRight30 {
+    margin-right: 30px;
+}
+.right {
+    float: right !important;
+}
+.fixed-bottom1{
+    /* position: fixed; */
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
+    padding-top: 25px;
+}

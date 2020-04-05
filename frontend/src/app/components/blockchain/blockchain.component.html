@@ -1,0 +1,43 @@
+<app-dashboard></app-dashboard>
+
+<div id="history">
+
+  <div class="row">
+    <div class="form-group col-md-3">
+      <input type="text" placeholder="Filter the results" 
+      class="form-control form-control-underlined" [(ngModel)]="searchText">
+    </div>
+    <div class="form-group col-md-3">
+      <button type="submit" class="btn btn-primary search-btn" (click) = "filterTheResults()">
+        <span class="fa fa-search"></span> Search</button>
+    </div>
+  </div>
+
+  <table id = "registration-table" class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Seller</th>
+        <th scope="col">Buyer</th>
+        <th scope="col">Price</th>
+        <th scope="col">Survey Number</th>
+        <th scope="col">Property Address</th>
+        <th scope="col">Property Type</th>
+        <th scope="col">Registration Done By</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor='let block of pagedItems;'>
+        <td>{{block.data.sellerName}}</td>
+        <td>{{block.data.buyerName}}</td>
+        <td>{{block.data.price}}</td>
+        <td>{{block.data.surveyNumber}}</td>
+        <td>{{block.data.propertyAddressCity + ", " + block.data.propertyAddressState}}</td>
+        <td>{{block.data.propertyType}}</td>
+        <td>{{block.registerationDoneBy}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <app-pagination [data] = "filteredResults"  (changePage)="onChangePage($event)"></app-pagination>
+</div>
