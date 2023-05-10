@@ -21,7 +21,7 @@
     "@angular/router": "~8.2.9",
     "@ngrx/store": "^9.0.0",
     "bootstrap": "^4.4.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jw-angular-pagination": "^1.1.0",
     "ng": "0.0.0",
     "popper.js": "^1.15.0",
